@@ -33,7 +33,7 @@ const fetchWeather = async (city) => {
 const addWeatherToDOM = (data) => {
   weatherDisplay.innerHTML = `
     <h1>Weather in ${data.city}</h1>
-    <h2>${data.temp} &deg;F  <img src="http://openweathermap.org/img/wn/${data.icon}.png"> ${data.tempC}  &deg;C</h2>
+    <h2>${data.temp} &deg;F  <img src="http://openweathermap.org/img/wn/${data.icon}@2x.png"> ${data.tempC}  &deg;C</h2>
   `
   cityInput.value = ''
 }
