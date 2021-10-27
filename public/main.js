@@ -38,10 +38,10 @@ const addWeatherToDOM = (data) => {
   cityInput.value = ''
 }
 
-// Convert Kelvin to Fahrenheit formula °F = K × 1.8 − 459.67
+// Convert Kelvin to Fahrenheit formula °F = (K × 9/5) − 460
 const kelvinToFahrenheit = (temp) => {
   // return Math.ceil(((temp - 273.15) * 9) / 5 + 32)
-  return Math.ceil((temp + 459.67) / 1.8)
+  return Math.ceil(temp * (9 / 5) - 460)
 }
 
 // Convert Kelvin to Celcius - Formula °C = K − 273.15
