@@ -14,7 +14,7 @@ const fetchWeather = async (city) => {
     return
   }
 
-  if (data.cod === 401) {
+  if (data.cod === '401') {
     alert('Invalid API Key')
     return
   }
