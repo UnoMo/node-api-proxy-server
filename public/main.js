@@ -32,15 +32,13 @@ const fetchWeather = async (city) => {
 const addWeatherToDOM = (data) => {
   weatherDisplay.innerHTML = `
     <h1>Weather in ${data.city}</h1>
-    <h2>${data.temp} &deg;F</h2>
-    <h2>${data.tempC} &deg;C</h2>
+    <h2>${data.temp} &deg;F / ${data.tempC} &deg;C</h2>
   `
   cityInput.value = ''
 }
 
 // Convert Kelvin to Fahrenheit formula °F = (K × 9/5) − 460
 const kelvinToFahrenheit = (temp) => {
-  // return Math.ceil(((temp - 273.15) * 9) / 5 + 32)
   return Math.ceil(temp * (9 / 5) - 460)
 }
 
